@@ -1,1 +1,7 @@
-<h1>hello angular</h1>
+<ul>
+    <li ng-repeat="topic in topics">
+        <p>{{topic.title}}</p>
+        <div>{{topic.content}}</div>
+        <a href="{{topic.author.avatar_url}}">{{topic.author.loginname}}</a>
+    </li>
+</ul>
