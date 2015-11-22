@@ -1,7 +1,34 @@
-<ul>
-    <li ng-repeat="topic in topics">
-        <p>{{topic.title}}</p>
-        <div>{{topic.content}}</div>
-        <a href="{{topic.author.avatar_url}}">{{topic.author.loginname}}</a>
-    </li>
-</ul>
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-main">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/home" class="navbar-brand">
+                <img src="./images/cnodejs_light.svg" alt="" with="30" height="30">
+            </a>
+        </div>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse-main">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="contaier-fluid">
+    <ul>
+        <li ng-repeat="topic in topics">
+            <p>{{topic.title}}</p>
+            <div>{{topic.content}}</div>
+            <p>{{topic.author.loginname}}</p>
+            <img src="{{topic.author.avatar_url}}" alt="" width="30" height="30">
+            <p>{{topic.last_reply_at}}</p>
+        </li>
+    </ul>
+</div>
