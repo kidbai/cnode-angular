@@ -1,0 +1,14 @@
+{
+  "name": "cnodejs-angular",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "http-server -a 127.0.0.1 -p 8000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Youngbye",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.8.5"
+  }
+}
