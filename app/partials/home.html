@@ -1,31 +1,29 @@
-<nav class="navbar navbar-inverse" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-main">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="/home" class="navbar-brand">
-                <img src="./images/cnodejs_light.svg" alt="" with="30" height="30">
-            </a>
-        </div>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" ng-click="isCollapsed = !isCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/home" class="navbar-brand">
+        <img src="./images/cnodejs_light.svg" alt="" with="30" height="30">
+    </a>
     </div>
-    <div class="collapse navbar-collapse" id="navbar-collapse-main">
+
+    <div class="collapse navbar-collapse" uib-collapse="!isCollapsed">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
+        <li class="active"><a href="#">全部</a></li>
+        <li><a href="#">精华</a></li>
       </ul>
     </div>
-  </div>
 </nav>
 
 <div class="contaier-fluid">
     <ul>
         <li ng-repeat="topic in topics">
             <p>{{topic.title}}</p>
-            <div>{{topic.content}}</div>
+            <!-- <p>{{topic.content}}</p> -->
             <p>{{topic.author.loginname}}</p>
             <img src="{{topic.author.avatar_url}}" alt="" width="30" height="30">
             <p>{{topic.last_reply_at}}</p>

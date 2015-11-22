@@ -9,5 +9,7 @@ cnodeAppCtrl.controller('getTopicsCtrl', ['$scope', '$http',
         $http.get('https://cnodejs.org/api/v1/topics?mdrender=false').success(function(data) {
             $scope.topics = data.data;
         });
+        $scope.isCollapsed = false;
+        console.log($scope.isCollapsed);
     }
 ]);

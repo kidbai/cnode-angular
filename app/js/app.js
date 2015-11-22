@@ -4,6 +4,7 @@
 
 var cnodeApp = angular.module('cnodeApp', [
   'ui.router',
+  'ui.bootstrap',
   'cnodeAppCtrl'
 ]);
 

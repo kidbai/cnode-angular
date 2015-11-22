@@ -1,6 +1,12 @@
-@import "compass/reset";
 @import "compass/css3";
 
 .navbar {
     @include border-radius(0);
+}
+
+.content {
+    position: relative;
+    max-width: 1000px;
+    min-width: 960px;
+    min-height: 400px;
 }
