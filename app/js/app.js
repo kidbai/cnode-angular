@@ -16,4 +16,8 @@ cnodeApp.config(function($stateProvider, $urlRouterProvider){
       url: "/home",
       templateUrl: "partials/home.html",
     })
+    .state('topic',{
+        url: '/topic',
+        templateUrl: 'partials/topic.html'
+    })
 })

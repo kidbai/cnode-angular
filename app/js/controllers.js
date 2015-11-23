@@ -8,7 +8,6 @@ cnodeAppCtrl.controller('getTopicsCtrl', ['$scope', '$http', '$sce',
     function($scope, $http, $sce) {
         $http.get('https://cnodejs.org/api/v1/topics').success(function(data) {
             $scope.topics = data.data;
-            
             console.log($scope.topics);
         });
         $scope.isCollapsed = false;
@@ -17,3 +16,4 @@ cnodeAppCtrl.controller('getTopicsCtrl', ['$scope', '$http', '$sce',
         }
     }
 ]);
+

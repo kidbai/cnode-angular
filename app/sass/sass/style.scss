@@ -1,7 +1,9 @@
+@import "compass/reset";
 @import "compass/css3";
 
 .navbar {
     @include border-radius(0);
+    margin-bottom: 0;
 }
 
 .content {
