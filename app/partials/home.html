@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-inverse" role="navigation">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" ng-click="isCollapsed = !isCollapsed">
         <span class="sr-only">Toggle navigation</span>
@@ -19,11 +19,11 @@
     </div>
 </nav>
 
-<div class="contaier-fluid">
+<div class="contaier-fluid" ng-controller="getTopicsCtrl">
     <ul>
         <li ng-repeat="topic in topics">
             <p>{{topic.title}}</p>
-            <!-- <p>{{topic.content}}</p> -->
+            <p ng-bind-html="SkipValidation(topic.content)"></p>
             <p>{{topic.author.loginname}}</p>
             <img src="{{topic.author.avatar_url}}" alt="" width="30" height="30">
             <p>{{topic.last_reply_at}}</p>

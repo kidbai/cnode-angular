@@ -5,7 +5,7 @@
 var cnodeApp = angular.module('cnodeApp', [
   'ui.router',
   'ui.bootstrap',
-  'cnodeAppCtrl'
+  'cnodeAppCtrl',
 ]);
 
 cnodeApp.config(function($stateProvider, $urlRouterProvider){
@@ -15,6 +15,5 @@ cnodeApp.config(function($stateProvider, $urlRouterProvider){
     .state('home', {
       url: "/home",
       templateUrl: "partials/home.html",
-      controller: 'getTopicsCtrl'
     })
 })
