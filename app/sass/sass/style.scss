@@ -6,9 +6,63 @@
     margin-bottom: 0;
 }
 
-.topic {
+.topics {
     margin: 5px 0;
     .title {
         line-height: 30px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .top {
+        @include border-radius(8px);
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background-color: #80bd01;
+        color: #fff;
+        display: none;
+    }
+    .top.active {
+        display: block;
+    }
+}
+
+.topic {
+    .top {
+        @include border-radius(8px);
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background-color: #80bd01;
+        color: #fff;
+        display: none;
+    }
+    .top.active {
+        display: inline-block;
+    }
+    .author {
+        font-size: 15px;
+        color: #939393;
+    }
+    .markdown-text {
+        padding: 30px;
+        h2 {
+            font-size: 25px;
+            font-weight: bold;
+            line-height: 35px;
+        }
+        p {
+            line-height: 35px;
+        }
+    }
+    .title {
+        padding: 20px;
+        border-bottom: 1px solid #e4e4e4;
+    }
+    .content {
+        border-bottom: 1px solid #e4e4e4;
     }
 }

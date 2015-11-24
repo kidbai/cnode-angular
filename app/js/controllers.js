@@ -10,17 +10,18 @@ cnodeAppCtrl.controller('getTopicsCtrl', ['$scope', '$http', '$sce',
             $scope.topics = data.data;
             console.log($scope.topics);
         });
-        $scope.isCollapsed = false;
-        $scope.SkipValidation = function(value) {
-            return $sce.trustAsHtml(value);
-        }
-        $scope.SubTitle = function(title) {
-            if(title.length < 15){
-                return title;
-            }else{
-                return title.substring(0,15) + '...';
-            }
-        }
     }
 ]);
 
+cnodeAppCtrl.controller('getTopicCtrl', ['$scope', '$http', '$sce', "$stateParams",
+    function($scope, $http, $sce, $stateParams) {
+        console.log($stateParams.topicId);
+        $http.get('https://cnodejs.org/api/v1/topic/' + $stateParams.topicId).success(function(data) {
+            $scope.topic = data.data;
+            console.log($scope.topic);
+        });
+        $scope.SkipValidation = function(value) {
+            return $sce.trustAsHtml(value);
+        }
+    }
+]);

@@ -9,15 +9,15 @@ var cnodeApp = angular.module('cnodeApp', [
 ]);
 
 cnodeApp.config(function($stateProvider, $urlRouterProvider){
-  $urlRouterProvider.otherwise("/home");
+  $urlRouterProvider.otherwise("/topics");
 
   $stateProvider
-    .state('home', {
-      url: "/home",
-      templateUrl: "partials/home.html",
+    .state('topics', {
+      url: "/topics",
+      templateUrl: "partials/topics.html",
     })
-    .state('topic',{
-        url: '/topic',
+    .state('topic', {
+        url: '/topic/:topicId',
         templateUrl: 'partials/topic.html'
     })
 })

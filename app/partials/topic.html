@@ -1,0 +1,18 @@
+<div class="container-fluid" ng-controller="getTopicCtrl">
+    <div class="col-md-8 col-sm-8 col-sm-12 topic">
+        <div class="row">
+            <div class="h3 title col-md-12 col-sm-12 col-sm-12">
+                <p>
+                    <span class="top" ng-class="{true: 'active', false: 'inactive'}[topic.top]">顶置</span> 
+                    {{topic.title}} 
+                    <span class="author">作者: {{topic.author.loginname}}</span>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 content">
+                <p ng-bind-html="SkipValidation(topic.content)"></p>
+            </div>
+        </div>
+    </div>
+</div>
