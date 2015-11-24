@@ -1,10 +1,10 @@
-<div class="container-fluid" ng-controller="getTopicCtrl">
-    <div class="col-md-8 col-sm-8 col-sm-12 topic">
+<div class="container-fluid topic" ng-controller="getTopicCtrl">
+    <div class="col-md-8 col-sm-8 col-sm-12">
         <div class="row">
-            <div class="h3 title col-md-12 col-sm-12 col-sm-12">
+            <div class="h3 title col-md-12 col-sm-12 col-sm-12 topic-main">
                 <p>
-                    <span class="top" ng-class="{true: 'active'}[topic.top]">顶置</span> 
-                    {{topic.title}} 
+                    <span class="top" ng-class="{true: 'active'}[topic.top]">顶置</span> {{topic.title}}
+                    <div class="clear"></div>
                     <span class="author">作者: {{topic.author.loginname}}</span>
                 </p>
             </div>
@@ -12,6 +12,15 @@
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12 content">
                 <p ng-bind-html="SkipValidation(topic.content)"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4 col-md-4 hidden-xs author-info">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <img src="{{topic.author.avatar_url}}" alt="图片加载失败咯" width="70">
+                <p>{{topic.author.loginname}}</p>
+                <p>积分:{{topic.visit_count}}</p>
             </div>
         </div>
     </div>

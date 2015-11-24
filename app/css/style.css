@@ -78,7 +78,7 @@ a {
   text-decoration: none;
 }
 
-/* line 4, ../sass/sass/style.scss */
+/* line 3, ../sass/sass/style.scss */
 .navbar {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
@@ -86,19 +86,20 @@ a {
   margin-bottom: 0;
 }
 
-/* line 9, ../sass/sass/style.scss */
+/* line 8, ../sass/sass/style.scss */
 .topics {
   margin: 5px 0;
 }
-/* line 11, ../sass/sass/style.scss */
+/* line 10, ../sass/sass/style.scss */
 .topics .title {
   line-height: 30px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-/* line 17, ../sass/sass/style.scss */
-.topics .top, .topics .good {
+/* line 16, ../sass/sass/style.scss */
+.topics .top,
+.topics .good {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
@@ -111,12 +112,18 @@ a {
   display: none;
 }
 /* line 27, ../sass/sass/style.scss */
-.topics .top.active, .topics .good.active {
+.topics .top.active,
+.topics .good.active {
   display: block;
 }
 
-/* line 33, ../sass/sass/style.scss */
-.topic .top {
+/* line 34, ../sass/sass/style.scss */
+.topic .topic-main {
+  padding: 20px;
+  border-bottom: 1px solid #e4e4e4;
+}
+/* line 37, ../sass/sass/style.scss */
+.topic .topic-main .top {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
@@ -128,35 +135,35 @@ a {
   color: #fff;
   display: none;
 }
-/* line 43, ../sass/sass/style.scss */
-.topic .top.active {
+/* line 47, ../sass/sass/style.scss */
+.topic .topic-main .top.active {
   display: inline-block;
 }
-/* line 46, ../sass/sass/style.scss */
-.topic .author {
+/* line 50, ../sass/sass/style.scss */
+.topic .topic-main .author {
   font-size: 15px;
   color: #939393;
+  margin-left: 40px;
 }
-/* line 50, ../sass/sass/style.scss */
-.topic .markdown-text {
+/* line 56, ../sass/sass/style.scss */
+.topic .content {
+  border-bottom: 1px solid #e4e4e4;
+}
+/* line 58, ../sass/sass/style.scss */
+.topic .content .markdown-text {
   padding: 30px;
 }
-/* line 52, ../sass/sass/style.scss */
-.topic .markdown-text h2 {
+/* line 60, ../sass/sass/style.scss */
+.topic .content .markdown-text h2 {
   font-size: 25px;
   font-weight: bold;
   line-height: 35px;
 }
-/* line 57, ../sass/sass/style.scss */
-.topic .markdown-text p {
+/* line 65, ../sass/sass/style.scss */
+.topic .content .markdown-text p {
   line-height: 35px;
 }
-/* line 61, ../sass/sass/style.scss */
-.topic .title {
-  padding: 20px;
-  border-bottom: 1px solid #e4e4e4;
-}
-/* line 65, ../sass/sass/style.scss */
-.topic .content {
-  border-bottom: 1px solid #e4e4e4;
+/* line 70, ../sass/sass/style.scss */
+.topic .author-info {
+  margin-top: 100px;
 }
