@@ -14,7 +14,7 @@
         white-space: nowrap;
         text-overflow: ellipsis;
     }
-    .top {
+    .top, .good {
         @include border-radius(8px);
         width: 30px;
         height: 30px;
@@ -24,7 +24,7 @@
         color: #fff;
         display: none;
     }
-    .top.active {
+    .top.active, .good.active {
         display: block;
     }
 }

@@ -98,7 +98,7 @@ a {
   text-overflow: ellipsis;
 }
 /* line 17, ../sass/sass/style.scss */
-.topics .top {
+.topics .top, .topics .good {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
@@ -111,7 +111,7 @@ a {
   display: none;
 }
 /* line 27, ../sass/sass/style.scss */
-.topics .top.active {
+.topics .top.active, .topics .good.active {
   display: block;
 }
 
