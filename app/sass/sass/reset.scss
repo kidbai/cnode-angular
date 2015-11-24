@@ -1,5 +1,4 @@
 /* line 5, ../../../../../.rvm/gems/ruby-2.2.2/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-/* line 2, ../sass/sass/reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -22,26 +21,22 @@ time, mark, audio, video {
 }
 
 /* line 22, ../../../../../.rvm/gems/ruby-2.2.2/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-/* line 24, ../sass/sass/reset.scss */
 html {
   line-height: 1;
 }
 
 /* line 24, ../../../../../.rvm/gems/ruby-2.2.2/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-/* line 29, ../sass/sass/reset.scss */
 ol, ul {
   list-style: none;
 }
 
 /* line 26, ../../../../../.rvm/gems/ruby-2.2.2/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-/* line 34, ../sass/sass/reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
 /* line 28, ../../../../../.rvm/gems/ruby-2.2.2/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-/* line 40, ../sass/sass/reset.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
@@ -49,48 +44,25 @@ caption, th, td {
 }
 
 /* line 30, ../../../../../.rvm/gems/ruby-2.2.2/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-/* line 47, ../sass/sass/reset.scss */
 q, blockquote {
   quotes: none;
 }
-
 /* line 103, ../../../../../.rvm/gems/ruby-2.2.2/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-/* line 51, ../sass/sass/reset.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
 /* line 32, ../../../../../.rvm/gems/ruby-2.2.2/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-/* line 57, ../sass/sass/reset.scss */
 a img {
   border: none;
 }
 
 /* line 116, ../../../../../.rvm/gems/ruby-2.2.2/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-/* line 62, ../sass/sass/reset.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
-/* line 66, ../sass/sass/reset.scss */
 a {
   text-decoration: none;
-}
-
-/* line 4, ../sass/sass/style.scss */
-.navbar {
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  margin-bottom: 0;
-}
-
-/* line 9, ../sass/sass/style.scss */
-.topic {
-  margin: 5px 0;
-}
-/* line 11, ../sass/sass/style.scss */
-.topic .title {
-  line-height: 30px;
 }

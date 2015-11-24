@@ -77,20 +77,3 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 a {
   text-decoration: none;
 }
-
-/* line 4, ../sass/sass/style.scss */
-.navbar {
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  margin-bottom: 0;
-}
-
-/* line 9, ../sass/sass/style.scss */
-.topic {
-  margin: 5px 0;
-}
-/* line 11, ../sass/sass/style.scss */
-.topic .title {
-  line-height: 30px;
-}

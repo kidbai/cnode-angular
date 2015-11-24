@@ -14,6 +14,13 @@ cnodeAppCtrl.controller('getTopicsCtrl', ['$scope', '$http', '$sce',
         $scope.SkipValidation = function(value) {
             return $sce.trustAsHtml(value);
         }
+        $scope.SubTitle = function(title) {
+            if(title.length < 15){
+                return title;
+            }else{
+                return title.substring(0,15) + '...';
+            }
+        }
     }
 ]);
 

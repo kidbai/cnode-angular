@@ -1,14 +1,14 @@
-@import "compass/reset";
 @import "compass/css3";
+@import "reset";
 
 .navbar {
     @include border-radius(0);
     margin-bottom: 0;
 }
 
-.content {
-    position: relative;
-    max-width: 1000px;
-    min-width: 960px;
-    min-height: 400px;
+.topic {
+    margin: 5px 0;
+    .title {
+        line-height: 30px;
+    }
 }
