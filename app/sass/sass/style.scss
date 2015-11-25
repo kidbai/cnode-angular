@@ -56,7 +56,7 @@
     border: 1px solid #eeeeee;
     @include box-shadow(0px 8px 20px rgba(50, 50, 50, 0.3));
     .topic-main {
-        padding: 20px 15px;
+        padding: 20px 0;
         border-bottom: 1px solid #e4e4e4;
         .top {
             @include border-radius(8px);
@@ -94,7 +94,7 @@
         margin-top: 100px;
     }
     .reply {
-        .reply-title{
+        .reply-title {
             border-bottom: 1px solid #e4e4e4;
             padding-bottom: 10px;
         }
@@ -104,6 +104,15 @@
                 padding: 10px 30px;
                 margin-bottom: 20px;
                 border-bottom: 1px solid #e4e4e4;
+                .markdown-text {
+                    word-break: break-all;
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                        vertical-align: middle;
+                        border: 0;
+                    }
+                }
             }
         }
     }

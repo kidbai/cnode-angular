@@ -157,7 +157,7 @@ a {
 }
 /* line 58, ../sass/sass/style.scss */
 .topic .topic-main {
-  padding: 20px 15px;
+  padding: 20px 0;
   border-bottom: 1px solid #e4e4e4;
 }
 /* line 61, ../sass/sass/style.scss */
@@ -215,4 +215,15 @@ a {
   padding: 10px 30px;
   margin-bottom: 20px;
   border-bottom: 1px solid #e4e4e4;
+}
+/* line 107, ../sass/sass/style.scss */
+.topic .reply .reply-content-wrapper .reply-content .markdown-text {
+  word-break: break-all;
+}
+/* line 109, ../sass/sass/style.scss */
+.topic .reply .reply-content-wrapper .reply-content .markdown-text img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
 }
