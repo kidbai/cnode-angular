@@ -3,36 +3,60 @@
 .navbar {
     @include border-radius(0);
     margin-bottom: 0;
+    .navbar-brand {
+        padding: 0;
+        img {
+            height: 50px;
+            margin-right: 10px;
+        }
+    }
 }
 
-.topics {
-    margin: 5px 0;
-    .title {
-        line-height: 30px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
-    .top,
-    .good {
-        @include border-radius(8px);
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        text-align: center;
-        background-color: #80bd01;
-        color: #fff;
-        display: none;
-    }
-    .top.active,
-    .good.active {
-        display: block;
+.topics-wrapper {
+    border: 1px solid #eeeeee;
+    @include box-shadow(0px 8px 20px rgba(50, 50, 50, 0.3));
+    .topics {
+        margin: 5px 0;
+        .title {
+            line-height: 30px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .top,
+        .good {
+            @include border-radius(8px);
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: #80bd01;
+            color: #fff;
+            display: none;
+        }
+        .top.active,
+        .good.active {
+            display: block;
+        }
+        .tab {
+            @include border-radius(8px);
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: #e7e7e7;
+            color: #fff;
+            display: block;
+        }
+        .tab.active {
+            display: none;
+        }
     }
 }
 
 .topic {
+    border: 1px solid #eeeeee;
+    @include box-shadow(0px 8px 20px rgba(50, 50, 50, 0.3));
     .topic-main {
-        padding: 20px;
+        padding: 20px 15px;
         border-bottom: 1px solid #e4e4e4;
         .top {
             @include border-radius(8px);
@@ -56,7 +80,6 @@
     .content {
         border-bottom: 1px solid #e4e4e4;
         .markdown-text {
-            padding: 30px;
             h2 {
                 font-size: 25px;
                 font-weight: bold;
@@ -69,5 +92,19 @@
     }
     .author-info {
         margin-top: 100px;
+    }
+    .reply {
+        .reply-title{
+            border-bottom: 1px solid #e4e4e4;
+            padding-bottom: 10px;
+        }
+        .reply-content-wrapper {
+            margin-bottom: 20px;
+            .reply-content {
+                padding: 10px 30px;
+                margin-bottom: 20px;
+                border-bottom: 1px solid #e4e4e4;
+            }
+        }
     }
 }

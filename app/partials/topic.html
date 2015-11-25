@@ -1,4 +1,4 @@
-<div class="container-fluid topic" ng-controller="getTopicCtrl">
+<div class="container topic" ng-controller="getTopicCtrl">
     <div class="col-md-8 col-sm-8 col-sm-12">
         <div class="row">
             <div class="h3 title col-md-12 col-sm-12 col-sm-12 topic-main">
@@ -14,11 +14,32 @@
                 <p ng-bind-html="SkipValidation(topic.content)"></p>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 reply">
+                <div class="h4 reply-title col-md-12 col-sm-12 col-xs-12">回复</div>
+                <div ng-repeat="reply in topic.replies" class="reply-content-wrapper">
+                    <div class="author-content col-md-12 col-sm-12 col-xs-12">
+                         <div class="col-md-1 col-sm-1 col-xs-1">
+                            <img src="{{reply.author.avatar_url}}" alt="" width="30" height="30">
+                        </div>
+                        <div class="col-md-9 col-sm-9 col-xs-9">
+                            <p>{{reply.author.loginname}}</p>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-2">
+                            <p><i class="fa fa-thumbs-o-up"></i>: {{reply.ups.length}}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 reply-content">
+                        <p ng-bind-html="SkipValidation(reply.content)"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="col-sm-4 col-md-4 hidden-xs author-info">
         <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-6">
-                <img src="{{topic.author.avatar_url}}" alt="图片加载失败咯" width="70">
+                <img src="{{topic.author.avatar_url}}" alt="努力加载中" width="70">
                 <p>{{topic.author.loginname}}</p>
                 <p>积分:{{topic.visit_count}}</p>
             </div>

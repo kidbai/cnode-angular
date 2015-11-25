@@ -1,16 +1,19 @@
-<div class="container-fluid" ng-controller="getTopicsCtrl">
+<div class="container topics-wrapper" ng-controller="getTopicsCtrl">
     <div class="row">
-            <div ng-repeat="topic in topics" class="col-md-12 col-sm-12 col-xs-12 topics">
-                <div class="col-md-1 col-sm-1 col-xs-1">
-                    <img src="{{topic.author.avatar_url}}" alt="" width="30">
-                </div>
-                <div class="col-md-1 col-sm-1 col-xs-1">
-                    <div class="top" ng-class="{true: 'active', false: ''}[topic.top]">顶置</div>
-                    <div class="good" ng-class="{true: 'active', false: ''}[topic.good]">精华</div>
-                </div>
-                <div class="col-md-9 col-sm-9 col-xs-9 title">
-                    <a ui-sref="topic({topicId: topic.id})">{{topic.title}}</a>
+        <div ng-repeat="topic in topics" class="col-md-12 col-sm-12 col-xs-12 topics">
+            <div class="col-md-1 col-sm-1 col-xs-1">
+                <img src="{{topic.author.avatar_url}}" alt="" width="30">
+            </div>
+            <div class="col-md-1 col-sm-1 col-xs-1">
+                <div class="top" ng-class="{true: 'active', false: ''}[topic.top]">顶置</div>
+                <div class="good" ng-class="{true: 'active', false: ''}[topic.good]">精华</div>
+                <div class="tab" ng-class="{true: 'active', false: ''}[topic.good || topic.top]">
+                    {{topic.tab}}
                 </div>
             </div>
+            <div class="col-md-9 col-sm-9 col-xs-9 title">
+                <a ui-sref="topic({topicId: topic.id})">{{topic.title}}</a>
+            </div>
+        </div>
     </div>
 </div>
