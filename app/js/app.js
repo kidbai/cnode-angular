@@ -6,6 +6,7 @@ var cnodeApp = angular.module('cnodeApp', [
   'ui.router',
   'ui.bootstrap',
   'cnodeAppCtrl',
+  'ngAnimate'
 ]);
 
 cnodeApp.config(function($stateProvider, $urlRouterProvider){
