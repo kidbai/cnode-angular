@@ -10,6 +10,15 @@ cnodeAppCtrl.controller('getTopicsCtrl', ['$scope', '$http', '$sce',
             $scope.topics = data.data;
             console.log($scope.topics);
         });
+        $scope.kindOfTab = function(value) {
+            if(value === 'ask'){
+                return '问答';
+            }
+            if(value === 'share'){
+                return '分享';
+            }
+
+        }
     }
 ]);
 
