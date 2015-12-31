@@ -268,20 +268,19 @@ body.on {
   position: relative;
   margin-top: 50px;
   padding: 0 15px;
-  z-index: 2;
 }
-/* line 164, ../sass/sass/style.scss */
+/* line 163, ../sass/sass/style.scss */
 .topics-wrapper .topics {
   margin: 5px 0;
 }
-/* line 166, ../sass/sass/style.scss */
+/* line 165, ../sass/sass/style.scss */
 .topics-wrapper .topics .title {
   line-height: 30px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-/* line 172, ../sass/sass/style.scss */
+/* line 171, ../sass/sass/style.scss */
 .topics-wrapper .topics .top,
 .topics-wrapper .topics .good {
   -moz-border-radius: 8px;
@@ -294,12 +293,12 @@ body.on {
   color: #fff;
   display: none;
 }
-/* line 182, ../sass/sass/style.scss */
+/* line 181, ../sass/sass/style.scss */
 .topics-wrapper .topics .top.active,
 .topics-wrapper .topics .good.active {
   display: block;
 }
-/* line 186, ../sass/sass/style.scss */
+/* line 185, ../sass/sass/style.scss */
 .topics-wrapper .topics .tab {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -311,12 +310,12 @@ body.on {
   color: #fff;
   display: block;
 }
-/* line 195, ../sass/sass/style.scss */
+/* line 194, ../sass/sass/style.scss */
 .topics-wrapper .topics .tab.active {
   display: none;
 }
 
-/* line 201, ../sass/sass/style.scss */
+/* line 200, ../sass/sass/style.scss */
 .topics-shade {
   background-color: #313131;
   opacity: 0;
@@ -333,7 +332,7 @@ body.on {
   transition: all 0.3s ease;
 }
 
-/* line 214, ../sass/sass/style.scss */
+/* line 213, ../sass/sass/style.scss */
 .topics-shade.on {
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -348,19 +347,19 @@ body.on {
   display: block;
 }
 
-/* line 222, ../sass/sass/style.scss */
+/* line 221, ../sass/sass/style.scss */
 .topic {
   border: 1px solid #eeeeee;
   -moz-box-shadow: 0px 8px 20px rgba(50, 50, 50, 0.3);
   -webkit-box-shadow: 0px 8px 20px rgba(50, 50, 50, 0.3);
   box-shadow: 0px 8px 20px rgba(50, 50, 50, 0.3);
 }
-/* line 225, ../sass/sass/style.scss */
+/* line 224, ../sass/sass/style.scss */
 .topic .topic-main {
   padding: 20px 0;
   border-bottom: 1px solid #e4e4e4;
 }
-/* line 228, ../sass/sass/style.scss */
+/* line 227, ../sass/sass/style.scss */
 .topic .topic-main .top {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -373,65 +372,65 @@ body.on {
   color: #fff;
   display: none;
 }
-/* line 238, ../sass/sass/style.scss */
+/* line 237, ../sass/sass/style.scss */
 .topic .topic-main .top.active {
   display: inline-block;
 }
-/* line 241, ../sass/sass/style.scss */
+/* line 240, ../sass/sass/style.scss */
 .topic .topic-main .author {
   font-size: 15px;
   color: #939393;
   margin-left: 40px;
 }
-/* line 247, ../sass/sass/style.scss */
+/* line 246, ../sass/sass/style.scss */
 .topic .content {
   border-bottom: 1px solid #e4e4e4;
 }
-/* line 249, ../sass/sass/style.scss */
+/* line 248, ../sass/sass/style.scss */
 .topic .content .markdown-text {
   word-break: break-all;
 }
-/* line 250, ../sass/sass/style.scss */
+/* line 249, ../sass/sass/style.scss */
 .topic .content .markdown-text h2 {
   font-size: 25px;
   font-weight: bold;
   line-height: 35px;
 }
-/* line 255, ../sass/sass/style.scss */
+/* line 254, ../sass/sass/style.scss */
 .topic .content .markdown-text p {
   line-height: 35px;
 }
-/* line 259, ../sass/sass/style.scss */
+/* line 258, ../sass/sass/style.scss */
 .topic .content .markdown-text img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
   border: 0;
 }
-/* line 267, ../sass/sass/style.scss */
+/* line 266, ../sass/sass/style.scss */
 .topic .author-info {
   margin-top: 100px;
 }
-/* line 271, ../sass/sass/style.scss */
+/* line 270, ../sass/sass/style.scss */
 .topic .reply .reply-title {
   border-bottom: 1px solid #e4e4e4;
   padding-bottom: 10px;
 }
-/* line 275, ../sass/sass/style.scss */
+/* line 274, ../sass/sass/style.scss */
 .topic .reply .reply-content-wrapper {
   margin-bottom: 20px;
 }
-/* line 277, ../sass/sass/style.scss */
+/* line 276, ../sass/sass/style.scss */
 .topic .reply .reply-content-wrapper .reply-content {
   padding: 10px 30px;
   margin-bottom: 20px;
   border-bottom: 1px solid #e4e4e4;
 }
-/* line 281, ../sass/sass/style.scss */
+/* line 280, ../sass/sass/style.scss */
 .topic .reply .reply-content-wrapper .reply-content .markdown-text {
   word-break: break-all;
 }
-/* line 283, ../sass/sass/style.scss */
+/* line 282, ../sass/sass/style.scss */
 .topic .reply .reply-content-wrapper .reply-content .markdown-text img {
   max-width: 100%;
   height: auto;

@@ -33,33 +33,48 @@
         </div>
         <ul>
             <li>
-                <i class="fa fa-circle-o-notch"></i>
-                全部
+                <a ui-sref='topics({tab: "all"})' ng-click="sidebarState = !sidebarState">
+                    <i class="fa fa-circle-o-notch"></i>
+                     全部
+                </a>
+                
             </li>
             <li>
-                <i class="fa fa-heart"></i>
-                精华
+                <a ui-sref='topics({tab: "good"})' ng-click="sidebarState = !sidebarState">
+                    <i class="fa fa-heart"></i>
+                    精华
+                </a>
             </li>
             <li>
-                <i class="fa fa-share"></i>
-                分享
+                <a ui-sref='topics({tab: "share"})' ng-click="sidebarState = !sidebarState">
+                    <i class="fa fa-share"></i>
+                    分享
+                </a>
             </li>
             <li>
-                <i class="fa fa-question-circle"></i>
-                问答
+                <a ui-sref='topics({tab: "ask"})' ng-click="sidebarState = !sidebarState">
+                    <i class="fa fa-question-circle"></i>
+                    问答
+                </a>
             </li>
             <li>
-                <i class="fa fa-user"></i>
-                招聘
+                <a ui-sref='topics({tab: "all"})' ng-click="sidebarState = !sidebarState">
+                    <i class="fa fa-user"></i>
+                    招聘
+                </a>
             </li>
             <li class="divider"></li>
             <li>
-                <i class="fa fa-commenting"></i>
-                消息
+                <a ui-sref='topics({tab: "all"})'>
+                    <i class="fa fa-commenting"></i>
+                    消息
+                </a>
             </li>
             <li>
-                <i class="fa fa-info-circle"></i>
-                关于
+                <a>
+                    <i class="fa fa-info-circle"></i>
+                    关于
+                </a>
             </li>
         </ul>
     </div>

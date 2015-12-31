@@ -13,7 +13,7 @@ cnodeAppCtrl.controller('getTopicsCtrl', ['$scope', '$http', '$sce', '$statePara
                 console.log($scope.topics);
             });
         }else{
-            $http.get('https://cnodejs.org/api/v1/topics' + $stateParams.tab).success(function(data) {
+            $http.get('https://cnodejs.org/api/v1/topics/?tab=' + $stateParams.tab).success(function(data) {
                 $scope.topics = data.data;
                 console.log($scope.topics);
             });

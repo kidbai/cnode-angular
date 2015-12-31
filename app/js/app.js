@@ -14,10 +14,11 @@ cnodeApp.config(function($stateProvider, $urlRouterProvider) {
 
     $stateProvider
         .state('topics', {
-            url: "/topics:tab?",
+            url: "/topics/:tab?",
             views: {
                 "content": {
-                    templateUrl: "partials/topics.html"
+                    templateUrl: "partials/topics.html",
+                    controller: "getTopicsCtrl"
                 }
             }
         })
