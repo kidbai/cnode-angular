@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-class="{on : sidebarState}">
     <div class="container-fluid">
         <div class="navbar-header">
             <button class="cnode-toggle" ng-click="sidebarState = !sidebarState">
@@ -6,6 +6,7 @@
                 <span class="cnode-icon-bar"></span>
                 <span class="cnode-icon-bar"></span>
             </button>            
+            <div class="navbar-title">全部</div>
         </div>
     </div>
 </nav>
@@ -25,5 +26,5 @@
         <li>关于</li>
     </ul>
 </div>
-
+<div class="topics-shade" ng-class="{on : sidebarState}" ng-click="sidebarState = !sidebarState"></div>
 <div ui-view="content"></div>

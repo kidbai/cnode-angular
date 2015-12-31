@@ -1,8 +1,38 @@
 @import "compass/css3";
 @import "reset";
+
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+html, body {
+  position: relative;
+  font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body.on {
+    position: fixed;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
 .navbar {
     @include border-radius(0);
     margin-bottom: 0;
+    background-color: #fff;
+    opacity: 0.95;
+    z-index: 1;
     .navbar-brand {
         padding: 0;
         img {
@@ -11,11 +41,126 @@
             margin-right: 10px;
         }
     }
+    .navbar-header {
+        position: relative;
+        @include transition(all .3s ease);
+        .cnode-toggle {
+            position: relative;
+            float: left;
+            padding: 9px 10px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            margin-left: 15px;
+            background-color: #fff;
+            border: 0;
+            .cnode-icon-bar {
+                background-color: #80bd01;
+                display: block;
+                width: 22px;
+                height: 2px;
+                border-radius: 1px;
+            }
+            .cnode-icon-bar+.cnode-icon-bar {
+                margin-top: 4px;
+            }
+        }
+        .cnode-toggle:focus {
+            outline: 0;
+        }
+        .navbar-title {
+            position: absolute;
+            text-align: center;
+            line-height: 30px;
+            font-size: 18px;
+            color: #313131;
+            width: 50px;
+            height: 30px;
+            display: block;
+            top: 50%;
+            left: 50%;
+            margin-left: -25px;
+            margin-top: -15px;
+            @include transition(all .3s ease);
+        }
+    }
+    
+    
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -200px;
+    width: 200px;
+    background-color: #fff;
+    color: #313131;
+    z-index: 999;
+    @include transition(all .3s ease);
+    .login {
+        position: relative;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin: 0 44px;
+        border-bottom: 1px solid #80bd01;
+        color: #80bd01;
+        .fa {
+            margin-right: 10px;
+        }
+        .fa-arrow-circle-right {
+            color: #80bd01;
+        }
+    }
+    ul {
+        position: relative;
+        padding-top: 10px;
+
+        li {
+            padding: 20px;
+            font-size: 16px;
+            text-align: center;
+            a {
+                color: #313131;
+                text-decoration: none;
+                .fa {
+                    margin-right: 10px;
+                }
+                
+            }
+        }
+        li.divider {
+            padding: 0;
+            margin: 0 44px;
+            height: 1px;
+            background-color: #80bd01;
+        }
+    }
+}
+
+.navbar.on {
+    .navbar-header {
+        left: 200px;
+        .navbar-title {
+            left: 200px;
+        }
+    }
+}
+
+.navbar.on ~ .sidebar {
+    left: 0;
+}
+
+.navbar.on ~ .topics-wrapper {
+    background-color: #000;
+    opacity: .5;
 }
 
 .topics-wrapper {
-    border: 1px solid #eeeeee;
-    @include box-shadow(0px 8px 20px rgba(50, 50, 50, 0.3));
+    position: relative;
+    margin-top: 50px;
+    padding: 0 15px;
+    z-index: 2;
     .topics {
         margin: 5px 0;
         .title {
@@ -51,6 +196,27 @@
             display: none;
         }
     }
+}
+
+.topics-shade {
+    background-color: #313131;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    visibility: hidden;
+    @include transition(all .3s ease);
+}
+
+.topics-shade.on {
+    @include transition(all .3s ease);
+    @include transform(translateX(200px));
+    visibility: visible;
+    opacity: .7;
+    display: block;
 }
 
 .topic {

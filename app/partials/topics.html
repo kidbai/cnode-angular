@@ -1,7 +1,7 @@
-<div class="container topics-wrapper" ng-controller="getTopicsCtrl">
+<div class="container-fluid topics-wrapper" ng-controller="getTopicsCtrl" ng-class="{on : sidebarState}">
     <div class="row">
         <div ng-repeat="topic in topics" class="col-md-12 col-sm-12 col-xs-12 topics">
-            <div class="col-md-1 col-sm-1 col-xs-1">
+            <!-- <div class="col-md-1 col-sm-1 col-xs-1">
                 <img src="{{topic.author.avatar_url}}" alt="" width="30">
             </div>
             <div class="col-md-1 col-sm-1 col-xs-2">
@@ -10,7 +10,7 @@
                 <div class="tab" ng-class="{true: 'active', false: ''}[topic.good || topic.top]">
                     <p ng-bind="kindOfTab(topic.tab)"></p>
                 </div>
-            </div>
+            </div> -->
             <div class="col-md-9 col-sm-9 col-xs-9 title">
                 <a ui-sref="topic({topicId: topic.id})">{{topic.title}}</a>
             </div>
