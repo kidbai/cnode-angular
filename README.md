@@ -1,5 +1,5 @@
 #angular cnode
 
-## install 
+ ![image](https://github.com/kidbai/cnode-angular/blob/master/app/images/cnode.png)
 
-git clone https://github.com/kidbai/cnode-angular.git
+继续完善中..
