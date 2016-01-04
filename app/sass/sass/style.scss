@@ -176,39 +176,27 @@ body.on {
             & > a.top:before {
                 background-color: #E74C3C;
             }
+            & > a.good:before {
+                background-color: #E67E22;
+            }
+            & > a.share:before {
+                background-color: #1ABC8C;
+            }
+            & > a.ask:before {
+                background-color: #c39b70;
+            }
+            & > a.job:before {
+                background-color: #9B59B9;
+            }
             & > a:before {
                 content: attr(title);
                 margin-right: 10px;
-                color: #313131;
+                color: #FFF;
+                padding: 4px;
                 background-color: #e7e7e7;
-                font-size: 15px;
+                font-size: 13px;
+                @include border-radius(5px);
             }
-        }
-        .top,
-        .good {
-            @include border-radius(8px);
-            height: 30px;
-            line-height: 30px;
-            text-align: center;
-            background-color: #80bd01;
-            color: #fff;
-            display: none;
-        }
-        .top.active,
-        .good.active {
-            display: block;
-        }
-        .tab {
-            @include border-radius(8px);
-            height: 30px;
-            line-height: 30px;
-            text-align: center;
-            background-color: #e7e7e7;
-            color: #fff;
-            display: block;
-        }
-        .tab.active {
-            display: none;
         }
     }
 }
