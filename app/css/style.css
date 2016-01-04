@@ -128,7 +128,7 @@ body.on {
   margin-right: 10px;
 }
 /* line 44, ../sass/sass/style.scss */
-.navbar .navbar-header {
+.navbar .cnode-header {
   position: relative;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -136,7 +136,7 @@ body.on {
   transition: all 0.3s ease;
 }
 /* line 47, ../sass/sass/style.scss */
-.navbar .navbar-header .cnode-toggle {
+.navbar .cnode-header .cnode-toggle {
   position: relative;
   float: left;
   padding: 9px 10px;
@@ -147,7 +147,7 @@ body.on {
   border: 0;
 }
 /* line 56, ../sass/sass/style.scss */
-.navbar .navbar-header .cnode-toggle .cnode-icon-bar {
+.navbar .cnode-header .cnode-toggle .cnode-icon-bar {
   background-color: #80bd01;
   display: block;
   width: 22px;
@@ -155,15 +155,15 @@ body.on {
   border-radius: 1px;
 }
 /* line 63, ../sass/sass/style.scss */
-.navbar .navbar-header .cnode-toggle .cnode-icon-bar + .cnode-icon-bar {
+.navbar .cnode-header .cnode-toggle .cnode-icon-bar + .cnode-icon-bar {
   margin-top: 4px;
 }
 /* line 67, ../sass/sass/style.scss */
-.navbar .navbar-header .cnode-toggle:focus {
+.navbar .cnode-header .cnode-toggle:focus {
   outline: 0;
 }
 /* line 70, ../sass/sass/style.scss */
-.navbar .navbar-header .navbar-title {
+.navbar .cnode-header .navbar-title {
   position: absolute;
   text-align: center;
   line-height: 30px;
@@ -175,7 +175,7 @@ body.on {
   top: 50%;
   left: 50%;
   margin-left: -25px;
-  margin-top: -15px;
+  margin-top: 10px;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
@@ -276,11 +276,30 @@ body.on {
 /* line 165, ../sass/sass/style.scss */
 .topics-wrapper .topics .title {
   line-height: 30px;
+  color: #313131;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 /* line 171, ../sass/sass/style.scss */
+.topics-wrapper .topics .title > a {
+  color: #2c3e50;
+  font-size: 16px;
+  line-height: 1.5;
+}
+/* line 176, ../sass/sass/style.scss */
+.topics-wrapper .topics .title > a.top:before {
+  background-color: #E74C3C;
+}
+/* line 179, ../sass/sass/style.scss */
+.topics-wrapper .topics .title > a:before {
+  content: attr(title);
+  margin-right: 10px;
+  color: #313131;
+  background-color: #e7e7e7;
+  font-size: 15px;
+}
+/* line 187, ../sass/sass/style.scss */
 .topics-wrapper .topics .top,
 .topics-wrapper .topics .good {
   -moz-border-radius: 8px;
@@ -293,12 +312,12 @@ body.on {
   color: #fff;
   display: none;
 }
-/* line 181, ../sass/sass/style.scss */
+/* line 197, ../sass/sass/style.scss */
 .topics-wrapper .topics .top.active,
 .topics-wrapper .topics .good.active {
   display: block;
 }
-/* line 185, ../sass/sass/style.scss */
+/* line 201, ../sass/sass/style.scss */
 .topics-wrapper .topics .tab {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -310,12 +329,12 @@ body.on {
   color: #fff;
   display: block;
 }
-/* line 194, ../sass/sass/style.scss */
+/* line 210, ../sass/sass/style.scss */
 .topics-wrapper .topics .tab.active {
   display: none;
 }
 
-/* line 200, ../sass/sass/style.scss */
+/* line 216, ../sass/sass/style.scss */
 .topics-shade {
   background-color: #313131;
   opacity: 0;
@@ -332,7 +351,7 @@ body.on {
   transition: all 0.3s ease;
 }
 
-/* line 213, ../sass/sass/style.scss */
+/* line 229, ../sass/sass/style.scss */
 .topics-shade.on {
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -347,19 +366,20 @@ body.on {
   display: block;
 }
 
-/* line 221, ../sass/sass/style.scss */
+/* line 237, ../sass/sass/style.scss */
 .topic {
+  padding-top: 50px;
   border: 1px solid #eeeeee;
   -moz-box-shadow: 0px 8px 20px rgba(50, 50, 50, 0.3);
   -webkit-box-shadow: 0px 8px 20px rgba(50, 50, 50, 0.3);
   box-shadow: 0px 8px 20px rgba(50, 50, 50, 0.3);
 }
-/* line 224, ../sass/sass/style.scss */
+/* line 241, ../sass/sass/style.scss */
 .topic .topic-main {
-  padding: 20px 0;
+  padding: 0 0 20px 0;
   border-bottom: 1px solid #e4e4e4;
 }
-/* line 227, ../sass/sass/style.scss */
+/* line 244, ../sass/sass/style.scss */
 .topic .topic-main .top {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -372,65 +392,65 @@ body.on {
   color: #fff;
   display: none;
 }
-/* line 237, ../sass/sass/style.scss */
+/* line 254, ../sass/sass/style.scss */
 .topic .topic-main .top.active {
   display: inline-block;
 }
-/* line 240, ../sass/sass/style.scss */
+/* line 257, ../sass/sass/style.scss */
 .topic .topic-main .author {
   font-size: 15px;
   color: #939393;
   margin-left: 40px;
 }
-/* line 246, ../sass/sass/style.scss */
+/* line 263, ../sass/sass/style.scss */
 .topic .content {
   border-bottom: 1px solid #e4e4e4;
 }
-/* line 248, ../sass/sass/style.scss */
+/* line 265, ../sass/sass/style.scss */
 .topic .content .markdown-text {
   word-break: break-all;
 }
-/* line 249, ../sass/sass/style.scss */
+/* line 266, ../sass/sass/style.scss */
 .topic .content .markdown-text h2 {
   font-size: 25px;
   font-weight: bold;
   line-height: 35px;
 }
-/* line 254, ../sass/sass/style.scss */
+/* line 271, ../sass/sass/style.scss */
 .topic .content .markdown-text p {
   line-height: 35px;
 }
-/* line 258, ../sass/sass/style.scss */
+/* line 275, ../sass/sass/style.scss */
 .topic .content .markdown-text img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
   border: 0;
 }
-/* line 266, ../sass/sass/style.scss */
+/* line 283, ../sass/sass/style.scss */
 .topic .author-info {
   margin-top: 100px;
 }
-/* line 270, ../sass/sass/style.scss */
+/* line 287, ../sass/sass/style.scss */
 .topic .reply .reply-title {
   border-bottom: 1px solid #e4e4e4;
   padding-bottom: 10px;
 }
-/* line 274, ../sass/sass/style.scss */
+/* line 291, ../sass/sass/style.scss */
 .topic .reply .reply-content-wrapper {
   margin-bottom: 20px;
 }
-/* line 276, ../sass/sass/style.scss */
+/* line 293, ../sass/sass/style.scss */
 .topic .reply .reply-content-wrapper .reply-content {
   padding: 10px 30px;
   margin-bottom: 20px;
   border-bottom: 1px solid #e4e4e4;
 }
-/* line 280, ../sass/sass/style.scss */
+/* line 297, ../sass/sass/style.scss */
 .topic .reply .reply-content-wrapper .reply-content .markdown-text {
   word-break: break-all;
 }
-/* line 282, ../sass/sass/style.scss */
+/* line 299, ../sass/sass/style.scss */
 .topic .reply .reply-content-wrapper .reply-content .markdown-text img {
   max-width: 100%;
   height: auto;

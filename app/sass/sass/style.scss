@@ -41,7 +41,7 @@ body.on {
             margin-right: 10px;
         }
     }
-    .navbar-header {
+    .cnode-header {
         position: relative;
         @include transition(all .3s ease);
         .cnode-toggle {
@@ -79,7 +79,7 @@ body.on {
             top: 50%;
             left: 50%;
             margin-left: -25px;
-            margin-top: -15px;
+            margin-top: 10px;
             @include transition(all .3s ease);
         }
     }
@@ -164,9 +164,25 @@ body.on {
         margin: 5px 0;
         .title {
             line-height: 30px;
+            color: #313131;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+            & > a {
+                color: #2c3e50;
+                font-size: 16px;
+                line-height: 1.5;
+            }
+            & > a.top:before {
+                background-color: #E74C3C;
+            }
+            & > a:before {
+                content: attr(title);
+                margin-right: 10px;
+                color: #313131;
+                background-color: #e7e7e7;
+                font-size: 15px;
+            }
         }
         .top,
         .good {
@@ -219,10 +235,11 @@ body.on {
 }
 
 .topic {
+    padding-top: 50px;
     border: 1px solid #eeeeee;
     @include box-shadow(0px 8px 20px rgba(50, 50, 50, 0.3));
     .topic-main {
-        padding: 20px 0;
+        padding: 0 0 20px 0;
         border-bottom: 1px solid #e4e4e4;
         .top {
             @include border-radius(8px);

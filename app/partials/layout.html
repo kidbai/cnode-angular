@@ -1,0 +1,66 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-class="{on : sidebarState}">
+        <div class="container-fluid">
+            <div class="cnode-header">
+                <button class="cnode-toggle" ng-click="sidebarState = !sidebarState">
+                    <span class="cnode-icon-bar"></span>
+                    <span class="cnode-icon-bar"></span>
+                    <span class="cnode-icon-bar"></span>
+                </button>            
+                <div class="navbar-title">全部</div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="sidebar">
+        <div class="login">
+            <i class="fa fa-arrow-circle-right"></i>
+            登陆
+        </div>
+        <ul>
+            <li>
+                <a ui-sref='topics({tab: "all"})' ng-click="sidebarState = !sidebarState">
+                    <i class="fa fa-circle-o-notch"></i>
+                     全部
+                </a>
+                
+            </li>
+            <li>
+                <a ui-sref='topics({tab: "good"})' ng-click="sidebarState = !sidebarState">
+                    <i class="fa fa-heart"></i>
+                    精华
+                </a>
+            </li>
+            <li>
+                <a ui-sref='topics({tab: "share"})' ng-click="sidebarState = !sidebarState">
+                    <i class="fa fa-share"></i>
+                    分享
+                </a>
+            </li>
+            <li>
+                <a ui-sref='topics({tab: "ask"})' ng-click="sidebarState = !sidebarState">
+                    <i class="fa fa-question-circle"></i>
+                    问答
+                </a>
+            </li>
+            <li>
+                <a ui-sref='topics({tab: "all"})' ng-click="sidebarState = !sidebarState">
+                    <i class="fa fa-user"></i>
+                    招聘
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a ui-sref='topics({tab: "all"})'>
+                    <i class="fa fa-commenting"></i>
+                    消息
+                </a>
+            </li>
+            <li>
+                <a>
+                    <i class="fa fa-info-circle"></i>
+                    关于
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="topics-shade" ng-class="{on : sidebarState}" ng-click="sidebarState = !sidebarState"></div>
