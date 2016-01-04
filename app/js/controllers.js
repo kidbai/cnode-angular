@@ -9,7 +9,6 @@ cnodeAppCtrl.controller('getTopicsCtrl', ['$scope', '$http', '$sce', '$statePara
         console.log($stateParams.tab);
         $http.get('https://cnodejs.org/api/v1/topics/?tab=' + $stateParams.tab + '&limit=40').success(function(data) {
             $scope.topics = data.data;
-            console.log($scope.topics);
             var topics = $scope.topics;
             angular.forEach(topics, function(value, key){
                 value.label = '';
@@ -37,7 +36,6 @@ cnodeAppCtrl.controller('getTopicsCtrl', ['$scope', '$http', '$sce', '$statePara
                     value.label = "none";
                     value.newTab = '暂无';
                 }
-                console.log(value.label);
                 // value.isAsk = false;
                 // value.isShare = false;
                 // value.isJob = false;

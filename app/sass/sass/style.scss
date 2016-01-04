@@ -30,7 +30,7 @@ body.on {
 .navbar {
     @include border-radius(0);
     margin-bottom: 0;
-    background-color: #fff;
+    background-color: #80bd01;
     opacity: 0.95;
     z-index: 1;
     .navbar-brand {
@@ -53,6 +53,7 @@ body.on {
             margin-left: 15px;
             background-color: #fff;
             border: 0;
+            @include border-radius(5px);
             .cnode-icon-bar {
                 background-color: #80bd01;
                 display: block;
@@ -70,9 +71,9 @@ body.on {
         .navbar-title {
             position: absolute;
             text-align: center;
+            color: #fff;
             line-height: 30px;
             font-size: 18px;
-            color: #313131;
             width: 50px;
             height: 30px;
             display: block;
@@ -139,9 +140,9 @@ body.on {
 }
 
 .navbar.on {
-    .navbar-header {
+    .cnode-header {
         left: 200px;
-        .navbar-title {
+        .cnode-title {
             left: 200px;
         }
     }
@@ -159,22 +160,25 @@ body.on {
 .topics-wrapper {
     position: relative;
     margin-top: 50px;
-    padding: 0 15px;
     .topics {
-        margin: 5px 0;
+        padding: 5px 15px;
+        border-bottom: 1px solid #acb29e;
         .title {
             line-height: 30px;
             color: #313131;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
             & > a {
+                position: relative;
+                display: block;
+                text-decoration: none;
                 color: #2c3e50;
                 font-size: 16px;
                 line-height: 1.5;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
             }
             & > a.top:before {
-                background-color: #E74C3C;
+                background-color: #ea6c5f;
             }
             & > a.good:before {
                 background-color: #E67E22;
@@ -183,7 +187,7 @@ body.on {
                 background-color: #1ABC8C;
             }
             & > a.ask:before {
-                background-color: #c39b70;
+                background-color: #6ca1fa;
             }
             & > a.job:before {
                 background-color: #9B59B9;
@@ -197,7 +201,22 @@ body.on {
                 font-size: 13px;
                 @include border-radius(5px);
             }
+            .title-content {
+                padding-top: 10px;
+                .avatar {
+                    float: left;
+                    width: 40px;
+                    margin-right: 10px;
+                    @include border-radius(50%);
+                }
+                .title-info {
+                    float: left;
+                }
+            }
         }
+    }
+    .topics:active {
+        background-color: #f9f9f9; 
     }
 }
 

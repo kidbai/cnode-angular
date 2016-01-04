@@ -11,8 +11,20 @@
                     <p ng-bind="kindOfTab(topic.tab)"></p>
                 </div>
             </div> -->
-            <div class="col-md-12 col-sm-12 col-xs-12 title">
-                <a ui-sref="topic({topicId: topic.id})" title="{{topic.newTab}}" ng-class="topic.label">{{topic.title}}</a>
+            <div class="col-md-12 col-sm-12 col-xs-12 title" ui-sref="topic({topicId: topic.id})">
+                <a title="{{topic.newTab}}" ng-class="topic.label">{{topic.title}}</a>
+                <div class="title-content">
+                    <img src="{{topic.author.avatar_url}}" alt="" class="avatar">
+                    <div class="title-info">
+                        <p>
+                            <span class="name">{{topic.author.loginname}}</span>
+                            <span class="status">
+                                <b>{{topic.reply_count}}</b>
+                                /{{topic.visit_count}}
+                            </span>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
