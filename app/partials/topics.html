@@ -1,6 +1,6 @@
 <div class="container-fluid topics-wrapper">
-    <div class="row">
-        <div ng-repeat="topic in topics" class="col-md-12 col-sm-12 col-xs-12 topics">
+    <ul class="row topics-scroll" scrolly="loadMore()">
+        <li ng-repeat="topic in topics" class="col-md-12 col-sm-12 col-xs-12 topics">
             <!-- <div class="col-md-1 col-sm-1 col-xs-1">
                 <img src="{{topic.author.avatar_url}}" alt="" width="30">
             </div>
@@ -11,7 +11,7 @@
                     <p ng-bind="kindOfTab(topic.tab)"></p>
                 </div>
             </div> -->
-            <div class="col-md-12 col-sm-12 col-xs-12 title" ui-sref="topic({topicId: topic.id})"  ng-controller="getMoreTopicsCtrl" >
+            <div class="col-md-12 col-sm-12 col-xs-12 title" ui-sref="topic({topicId: topic.id})"  ng-controller="getMoreTopicsCtrl">
                 <a title="{{topic.newTab}}" ng-class="topic.label">{{topic.title}}</a>
                 <div class="title-content">
                     <img src="{{topic.author.avatar_url}}" alt="" class="avatar">
@@ -26,6 +26,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </li>
+    </ul>
 </div>

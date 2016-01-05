@@ -6,11 +6,35 @@ var cnodeAppCtrl = angular.module('cnodeAppCtrl', ['ngSanitize']);
 
 cnodeAppCtrl.controller('getTopicsCtrl', ['$scope', '$http', '$sce', '$stateParams',
     function($scope, $http, $sce, $stateParams) {
-        // console.log($stateParams.tab);
         $scope.currentPage = 1;
+        $scope.page = 1;
+        $scope.loading = true;
         $http.get('https://cnodejs.org/api/v1/topics/?tab=' + $stateParams.tab + '&limit=20' + '&page=' + $scope.currentPage).success(function(data) {
             $scope.topics = data.data;
             var topics = $scope.topics;
+            $scope.labelHandle(topics);
+        });
+        
+        $scope.loadMore = function() {
+            console.log($scope.loading);
+            if($scope.loading){
+                $scope.loading = false;
+                return false;
+            }
+            else{
+                $scope.loading = true;
+                $scope.page++;
+                $http.get('https://cnodejs.org/api/v1/topics/?tab=' + $stateParams.tab + '&limit=20' + '&page=' + $scope.page).success(function (data){
+                    for(var i in data.data){
+                        $scope.topics.push(data.data[i]);
+                    }
+                    $scope.labelHandle(data.data);
+                })
+            }
+            
+        }
+
+        $scope.labelHandle = function(topics) {
             angular.forEach(topics, function(value, key){
                 value.label = '';
                 if(value.top){
@@ -38,9 +62,6 @@ cnodeAppCtrl.controller('getTopicsCtrl', ['$scope', '$http', '$sce', '$statePara
                     value.newTab = '暂无';
                 }
             })
-        });
-        
-        $scope.loadMore = function() {
         }
     }
 ]);

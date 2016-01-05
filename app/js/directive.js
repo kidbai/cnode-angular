@@ -1,14 +1,25 @@
 'use strict';
 
-var cnodeDirective = angular.module('cnodeDirective', [
-    'cnodeApp',
-    'cnodeAppCtrl'
-]);
+var cnodeDirective = angular.module('cnodeDirective', []);
 
-cnodeDirective.directive("hello", function() {
+cnodeDirective.directive("scrolly", function() {
     return {
         restrict: "A",
-        template: "<li>hello</li>",
-        replace: true
-    }
+        link: function(scope, element, attr){
+            console.log(element);
+            var raw = element[0];
+            console.log(raw);
+            element.bind('scroll', function () {
+                console.log('in scroll');
+                // console.log(raw.scrollTop + raw.offsetHeight);
+                // console.log(raw.scrollHeight);
+                // console.log(attr);
+                if (raw.scrollTop + raw.offsetHeight > raw.scrollHeight - 100) {
+                    console.log('yes');
+                    // console.log(attr.scrolly);
+                    scope.$apply(attr.scrolly);
+                }
+            });
+        }
+    };
 })
