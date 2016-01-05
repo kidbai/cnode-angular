@@ -296,6 +296,17 @@ body.on {
             padding-bottom: 10px;
         }
         .reply-content-wrapper {
+            .author-content {
+                img {
+                    @include border-radius(50%);
+                    float: left;
+                }
+                .author-details {
+                    padding: 5px;
+                    float: right;
+                    font-size: 15px;
+                }
+            }
             margin-bottom: 20px;
             .reply-content {
                 padding: 10px 30px;

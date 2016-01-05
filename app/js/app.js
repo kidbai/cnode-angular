@@ -5,6 +5,7 @@
 var cnodeApp = angular.module('cnodeApp', [
     'ui.router',
     'cnodeAppCtrl',
+    'cnodeDirective',
     'ngAnimate'
 ]);
 

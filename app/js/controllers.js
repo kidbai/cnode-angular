@@ -6,8 +6,9 @@ var cnodeAppCtrl = angular.module('cnodeAppCtrl', ['ngSanitize']);
 
 cnodeAppCtrl.controller('getTopicsCtrl', ['$scope', '$http', '$sce', '$stateParams',
     function($scope, $http, $sce, $stateParams) {
-        console.log($stateParams.tab);
-        $http.get('https://cnodejs.org/api/v1/topics/?tab=' + $stateParams.tab + '&limit=40').success(function(data) {
+        // console.log($stateParams.tab);
+        $scope.currentPage = 1;
+        $http.get('https://cnodejs.org/api/v1/topics/?tab=' + $stateParams.tab + '&limit=20' + '&page=' + $scope.currentPage).success(function(data) {
             $scope.topics = data.data;
             var topics = $scope.topics;
             angular.forEach(topics, function(value, key){
@@ -36,25 +37,20 @@ cnodeAppCtrl.controller('getTopicsCtrl', ['$scope', '$http', '$sce', '$statePara
                     value.label = "none";
                     value.newTab = '暂无';
                 }
-                // value.isAsk = false;
-                // value.isShare = false;
-                // value.isJob = false;
-               
             })
         });
         
-        $scope.kindOfTab = function(value) {
-            if(value === 'ask'){
-                return '问答';
-            }
-            if(value === 'share'){
-                return '分享';
-            }
-            if(value === 'job'){
-                return '工作';
-            }
-
+        $scope.loadMore = function() {
         }
+    }
+]);
+
+//瀑布流
+cnodeAppCtrl.controller('getMoreTopicsCtrl', ['$scope', '$http',
+    function($scope, $http){
+        var page = 2  //当前页数
+            , loading = false;  //判断是否正在请求读取的内容
+
     }
 ]);
 
@@ -74,5 +70,6 @@ cnodeAppCtrl.controller('getTopicCtrl', ['$scope', '$http', '$sce', "$stateParam
 cnodeAppCtrl.controller('sidebarCtrl', ['$scope',
     function($scope){ 
         $scope.sidebarState = false;
+        $scope.name = 'yangbai';
     }
 ])

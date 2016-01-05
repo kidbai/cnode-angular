@@ -454,16 +454,29 @@ body.on {
   margin-bottom: 20px;
 }
 /* line 300, ../sass/sass/style.scss */
+.topic .reply .reply-content-wrapper .author-content img {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  float: left;
+}
+/* line 304, ../sass/sass/style.scss */
+.topic .reply .reply-content-wrapper .author-content .author-details {
+  padding: 5px;
+  float: right;
+  font-size: 15px;
+}
+/* line 311, ../sass/sass/style.scss */
 .topic .reply .reply-content-wrapper .reply-content {
   padding: 10px 30px;
   margin-bottom: 20px;
   border-bottom: 1px solid #e4e4e4;
 }
-/* line 304, ../sass/sass/style.scss */
+/* line 315, ../sass/sass/style.scss */
 .topic .reply .reply-content-wrapper .reply-content .markdown-text {
   word-break: break-all;
 }
-/* line 306, ../sass/sass/style.scss */
+/* line 317, ../sass/sass/style.scss */
 .topic .reply .reply-content-wrapper .reply-content .markdown-text img {
   max-width: 100%;
   height: auto;
