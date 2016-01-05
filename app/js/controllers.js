@@ -8,7 +8,7 @@ cnodeAppCtrl.controller('getTopicsCtrl', ['$scope', '$http', '$sce', '$statePara
     function($scope, $http, $sce, $stateParams) {
         $scope.currentPage = 1;
         $scope.page = 1;
-        $scope.loading = true;
+        $scope.loading = false;
         $http.get('https://cnodejs.org/api/v1/topics/?tab=' + $stateParams.tab + '&limit=20' + '&page=' + $scope.currentPage).success(function(data) {
             $scope.topics = data.data;
             var topics = $scope.topics;
@@ -18,13 +18,13 @@ cnodeAppCtrl.controller('getTopicsCtrl', ['$scope', '$http', '$sce', '$statePara
         $scope.loadMore = function() {
             console.log($scope.loading);
             if($scope.loading){
-                $scope.loading = false;
+                $scope.loading = true;
                 return false;
             }
             else{
-                $scope.loading = true;
                 $scope.page++;
                 $http.get('https://cnodejs.org/api/v1/topics/?tab=' + $stateParams.tab + '&limit=20' + '&page=' + $scope.page).success(function (data){
+                    $scope.loading = false;
                     for(var i in data.data){
                         $scope.topics.push(data.data[i]);
                     }

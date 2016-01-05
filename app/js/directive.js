@@ -14,9 +14,9 @@ cnodeDirective.directive("scrolly", function() {
                 // console.log(raw.scrollTop + raw.offsetHeight);
                 // console.log(raw.scrollHeight);
                 // console.log(attr);
-                if (raw.scrollTop + raw.offsetHeight > raw.scrollHeight - 100) {
+                if (raw.scrollTop + raw.offsetHeight == raw.scrollHeight) {
                     console.log('yes');
-                    // console.log(attr.scrolly);
+                    console.log(attr.scrolly);
                     scope.$apply(attr.scrolly);
                 }
             });
